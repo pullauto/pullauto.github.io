@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>墨染&#39;s Blog</title>
+  
+  <subtitle>比较慢热，不易相处</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="//pullauto.github.io/"/>
+  <updated>2020-07-05T15:41:38.228Z</updated>
+  <id>//pullauto.github.io/</id>
+  
+  <author>
+    <name>墨染</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>chrome浏览器使用技巧</title>
+    <link href="//pullauto.github.io/2020/07/04/browser-shortcuts/"/>
+    <id>//pullauto.github.io/2020/07/04/browser-shortcuts/</id>
+    <published>2020-07-04T02:00:00.000Z</published>
+    <updated>2020-07-05T15:41:38.228Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="快捷键技巧"><a href="#快捷键技巧" class="headerlink" title="快捷键技巧"></a>快捷键技巧</h4><h5 id="常用的"><a href="#常用的" class="headerlink" title="常用的"></a>常用的</h5><ol><li><strong>清除浏览器缓存刷新：</strong>Ctrl+F5</li><li><strong>搜索当前页面内容：</strong>Ctrl+F       Ctrl+G       F3</li><li><strong>恢复之前关闭的标签页：</strong>Ctrl+Shift+T ，Chrome会保留最近10个已关闭标签的历史。</li><li><strong>打开Chrome的任务管理器：</strong>Shift+Esc ，可以让你监控Chrome中每个标签的资源占用</li><li><strong>将所有打开的页面保存在书签中的新建文件夹内：</strong>Ctrl+Shift+D</li><li><strong>将剪切板中的内容无格式粘贴：</strong>Ctrl+Shift+V </li></ol><a id="more"></a><h5 id="还行的"><a href="#还行的" class="headerlink" title="还行的"></a>还行的</h5><ol><li><strong>Ctrl+T：打开新的标签页</strong></li><li><strong>Ctrl+N：打开新的窗口</strong></li><li><strong>Ctrl+W：关闭当前标签页</strong></li><li><strong>空格键：向下滚动一个完整的页面</strong></li><li><strong>Shift+空格键：向上滚动一个完整的页面</strong></li><li><strong>Ctrl+Tab：按顺序切换标签页</strong></li><li><strong>Ctrl+1、2……8：切换到数字对应的标签页（如果标签页存在）</strong></li><li><strong>Ctrl+点击链接：将链接在新标签页打开，且不离开当前浏览页面</strong></li><li><strong>Shift+点击链接：将链接在新窗口打开</strong></li><li><strong>Ctrl+Shift+点击链接：将链接在新标签页打开，并跳转至新标签页</strong></li></ol><h4 id="开发者技巧"><a href="#开发者技巧" class="headerlink" title="开发者技巧"></a>开发者技巧</h4><p><strong>1.快速寻找文件：</strong></p><p>F12 - source –  ctrl +P  输入文件名  搜索</p><p><strong>2.在源代码中搜索代码</strong></p><p>F12 – Elements  ctrl + F 输入搜索内容</p><p><strong>3.使用多个插入符进行选择</strong></p><p>当编辑一个文件的时候，你可以按住Ctrl在你要编辑的地方点击鼠标，可以设置多个插入符，这样可以一次在多个地方编辑</p><p><strong>4.获取网页所有图片：</strong></p><p>F12 – Console</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$$(<span class="string">'img'</span>).map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;<span class="keyword">return</span> item.src&#125;).join(<span class="string">"\r\n"</span>)  <span class="comment">//或者</span></span><br><span class="line">[...$$(<span class="string">"img"</span>)].map(<span class="function"><span class="params">a</span> =&gt;</span> a.src).join(<span class="string">'\r\n'</span>)</span><br></pre></td></tr></table></figure><p>复制所有链接使用<code>copy($$(&#39;a&#39;).map(function(item){return item.href;}))</code>然后把这些地址放在一个文件<code>url.txt</code>内</p><p>接下来用<a href="https://link.juejin.im/?target=http%3A%2F%2Fgnuwin32.sourceforge.net%2Fpackages%2Fwget.htm" target="_blank" rel="noopener">wget</a>一键下载。<code>wget -i url.txt -P ./img</code> 所有图片都下载到本地目录<strong>img</strong>了。</p><p><strong>5.地址栏智能搜索</strong></p><p>当你曾经使用Chrome打开过某个具有搜索功能的网站，并且使用了这个网站的搜索引擎进行搜索，那么当你下次在Chrome地址栏中输入这个网址的时候，Chrome会在地址栏最右端提示你“按 Tab 可通过进行搜索”，当你按下 Tab键 再输入搜索内容时，Chrome会直接使用这个网站的搜索引擎进行搜索。</p><p>也可以自行设置：打开设置&gt;搜索引擎&gt;管理搜索引擎</p><p><strong>关键词</strong>可随意设置，<strong>查询网址</strong>为网站的搜索引擎地址</p><p>例如：github的查询网址：</p><p><a href="https://github.com/search?q=%s&amp;ref=opensearch" target="_blank" rel="noopener">https://github.com/search?q=%s&amp;ref=opensearch</a></p><p>我的<strong>github</strong>搜索引擎关键字是<strong>git</strong>输入后按<strong>Tab</strong>即可搜索github中的内容</p><p>还有一些在element中修改样式等</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;快捷键技巧&quot;&gt;&lt;a href=&quot;#快捷键技巧&quot; class=&quot;headerlink&quot; title=&quot;快捷键技巧&quot;&gt;&lt;/a&gt;快捷键技巧&lt;/h4&gt;&lt;h5 id=&quot;常用的&quot;&gt;&lt;a href=&quot;#常用的&quot; class=&quot;headerlink&quot; title=&quot;常用的&quot;&gt;&lt;/a&gt;常用的&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;清除浏览器缓存刷新：&lt;/strong&gt;Ctrl+F5&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;搜索当前页面内容：&lt;/strong&gt;Ctrl+F       Ctrl+G       F3&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;恢复之前关闭的标签页：&lt;/strong&gt;Ctrl+Shift+T ，Chrome会保留最近10个已关闭标签的历史。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打开Chrome的任务管理器：&lt;/strong&gt;Shift+Esc ，可以让你监控Chrome中每个标签的资源占用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;将所有打开的页面保存在书签中的新建文件夹内：&lt;/strong&gt;Ctrl+Shift+D&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;将剪切板中的内容无格式粘贴：&lt;/strong&gt;Ctrl+Shift+V &lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="chrome" scheme="//pullauto.github.io/tags/chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win使用快捷键</title>
+    <link href="//pullauto.github.io/2020/07/04/win-shortcuts/"/>
+    <id>//pullauto.github.io/2020/07/04/win-shortcuts/</id>
+    <published>2020-07-04T01:00:00.000Z</published>
+    <updated>2020-07-05T09:32:15.865Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="比较常用的"><a href="#比较常用的" class="headerlink" title="比较常用的"></a>比较常用的</h4><ol><li><strong>电脑锁屏：</strong>win+L</li><li><strong>打开运行框：</strong>win+ R</li><li><strong>剪贴板记录：</strong>win+V</li><li><strong>快速显示桌面：</strong>win+D</li><li><strong>屏幕放大镜：</strong>win+加号键</li><li><strong>切换窗口</strong>：alt+Tab</li></ol><a id="more"></a><hr><h4 id="还行的"><a href="#还行的" class="headerlink" title="还行的"></a>还行的</h4><ol><li><strong>快速设置：</strong>win+X</li><li><strong>步骤记录器：</strong>win+R 输入psr.exe</li><li><strong>虚拟键盘：</strong>win+R 输入osk</li><li><strong>快速更改文件名：</strong>F2</li><li><strong>关闭当前窗口：</strong>Ctrl + W</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;比较常用的&quot;&gt;&lt;a href=&quot;#比较常用的&quot; class=&quot;headerlink&quot; title=&quot;比较常用的&quot;&gt;&lt;/a&gt;比较常用的&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;电脑锁屏：&lt;/strong&gt;win+L&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打开运行框：&lt;/strong&gt;win+ R&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;剪贴板记录：&lt;/strong&gt;win+V&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;快速显示桌面：&lt;/strong&gt;win+D&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;屏幕放大镜：&lt;/strong&gt;win+加号键&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;切换窗口&lt;/strong&gt;：alt+Tab&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="win小技巧" scheme="//pullauto.github.io/tags/win%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>临时邮箱推荐</title>
+    <link href="//pullauto.github.io/2020/05/09/temporary-email/"/>
+    <id>//pullauto.github.io/2020/05/09/temporary-email/</id>
+    <published>2020-05-09T01:36:00.000Z</published>
+    <updated>2020-07-05T08:38:01.561Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>使用临时邮箱可以避免泄露您的信息，收到过多的广告邮件和垃圾邮件，还可以避免被跟踪。同时具有时效性，邮箱在短时间内会自毁。</p><p>适用于在你想试用某些服务，但必须提供邮箱的情况下，<br>在注册某些不重要的服务时使用临时邮箱作为替身是个很好的选择。</p><a id="more"></a><p><strong>10分钟邮箱</strong>：<a href="https://10minutemail.net/?lang=zh-cn" target="_blank" rel="noopener">https://10minutemail.net/?lang=zh-cn</a><br><strong>24小时邮箱</strong>：<a href="http://24mail.chacuo.net/" target="_blank" rel="noopener">http://24mail.chacuo.net/</a><br><strong>临时邮箱</strong>：<a href="https://www.linshiyouxiang.net/" target="_blank" rel="noopener">https://www.linshiyouxiang.net/</a><br><strong>临时邮箱</strong>：<a href="https://temp-mail.org/zh/" target="_blank" rel="noopener">https://temp-mail.org/zh/</a></p><h4 id="可以发邮件的临时邮箱："><a href="#可以发邮件的临时邮箱：" class="headerlink" title="可以发邮件的临时邮箱："></a>可以发邮件的临时邮箱：</h4><p>QQ的不行，google的可以，其他没试</p><p><strong>guerrillamail.com</strong>：<a href="https://www.guerrillamail.com/zh/" target="_blank" rel="noopener">https://www.guerrillamail.com/zh/</a></p><p><strong>moakt.com</strong>：<a href="https://www.moakt.com/zh" target="_blank" rel="noopener">https://www.moakt.com/zh</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h4&gt;&lt;p&gt;使用临时邮箱可以避免泄露您的信息，收到过多的广告邮件和垃圾邮件，还可以避免被跟踪。同时具有时效性，邮箱在短时间内会自毁。&lt;/p&gt;
+&lt;p&gt;适用于在你想试用某些服务，但必须提供邮箱的情况下，&lt;br&gt;在注册某些不重要的服务时使用临时邮箱作为替身是个很好的选择。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="临时工具" scheme="//pullauto.github.io/tags/%E4%B8%B4%E6%97%B6%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo优化</title>
+    <link href="//pullauto.github.io/2020/04/12/hexo-optimization/"/>
+    <id>//pullauto.github.io/2020/04/12/hexo-optimization/</id>
+    <published>2020-04-12T01:00:00.000Z</published>
+    <updated>2020-07-05T18:23:22.906Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="部署发布"><a href="#部署发布" class="headerlink" title="部署发布"></a>部署发布</h4><p>hexo提供了一键部署功能，通过简单的配置能够一键部署到网站服务器上。</p><p>在hexo的根目录中安装 <code>hexo-deployer-git</code> 插件</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure><p>然后修改根目录<strong>_config.xml</strong> 文件中的</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git       <span class="comment">//部署类型  </span></span><br><span class="line">  <span class="attribute">repo</span>:git<span class="variable">@github</span>.<span class="attribute">com</span>:pullauto/pullauto.github.io.git      <span class="comment">//Repository地址</span></span><br><span class="line">  <span class="attribute">branch</span>:master       <span class="comment">//分支名称</span></span><br><span class="line">  <span class="attribute">message</span>: (自定义提交信息,默认为Site <span class="attribute">updated</span>: &#123;&#123; now(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>) &#125;&#125;)</span><br></pre></td></tr></table></figure><a id="more"></a><p>使用以下命令部署你的博客</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">deploy</span>   或   hexo d</span><br></pre></td></tr></table></figure><h4 id="备份博客"><a href="#备份博客" class="headerlink" title="备份博客"></a>备份博客</h4><p>在hexo的根目录中安装 <code>hexo-git-backup</code> 插件</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-git-<span class="keyword">backup</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure><p>然后在根目录<strong>_config.xml</strong> 文件中添加</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">backup</span>:</span><br><span class="line">    <span class="attribute">type</span>: git</span><br><span class="line">    <span class="attribute">message</span>: 自定义提交信息</span><br><span class="line">    <span class="attribute">repository</span>:</span><br><span class="line">       <span class="attribute">github</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:pullauto/pullauto.github.io.git,blog-backup</span><br><span class="line">                                   备份仓库，分支</span><br></pre></td></tr></table></figure><p>使用以下命令备份你的博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">hexo</span> <span class="keyword">backup </span>  或   hexo <span class="keyword">b</span></span><br></pre></td></tr></table></figure></p><h4 id="配置基本信息"><a href="#配置基本信息" class="headerlink" title="配置基本信息"></a>配置基本信息</h4><p>在根目录下的_config.xml中修改<br><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title网站标题</span><br><span class="line">subtitle网站副标题</span><br><span class="line">description网站描述</span><br><span class="line">author作者名</span><br><span class="line">language网站语言</span><br><span class="line">timezone网站使用的时区</span><br><span class="line"><span class="built_in">url</span>     网站<span class="built_in">url</span></span><br><span class="line">root 网站根目录</span><br></pre></td></tr></table></figure></p><p>东西比较多，持续更新</p><p>参考：</p><p><a href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="noopener">hexo-git-backup</a> </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;部署发布&quot;&gt;&lt;a href=&quot;#部署发布&quot; class=&quot;headerlink&quot; title=&quot;部署发布&quot;&gt;&lt;/a&gt;部署发布&lt;/h4&gt;&lt;p&gt;hexo提供了一键部署功能，通过简单的配置能够一键部署到网站服务器上。&lt;/p&gt;
+&lt;p&gt;在hexo的根目录中安装 &lt;code&gt;hexo-deployer-git&lt;/code&gt; 插件&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install&lt;/span&gt; hexo-deployer-git &lt;span class=&quot;comment&quot;&gt;--save&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后修改根目录&lt;strong&gt;_config.xml&lt;/strong&gt; 文件中的&lt;/p&gt;
+&lt;figure class=&quot;highlight less&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;deploy&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;: git       &lt;span class=&quot;comment&quot;&gt;//部署类型  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;repo&lt;/span&gt;:git&lt;span class=&quot;variable&quot;&gt;@github&lt;/span&gt;.&lt;span class=&quot;attribute&quot;&gt;com&lt;/span&gt;:pullauto/pullauto.github.io.git      &lt;span class=&quot;comment&quot;&gt;//Repository地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;branch&lt;/span&gt;:master       &lt;span class=&quot;comment&quot;&gt;//分支名称&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;message&lt;/span&gt;: (自定义提交信息,默认为Site &lt;span class=&quot;attribute&quot;&gt;updated&lt;/span&gt;: &amp;#123;&amp;#123; now(&lt;span class=&quot;string&quot;&gt;&#39;YYYY-MM-DD HH:mm:ss&#39;&lt;/span&gt;) &amp;#125;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="//pullauto.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo添加Valine第三方评论系统</title>
+    <link href="//pullauto.github.io/2020/04/11/hexo-valine/"/>
+    <id>//pullauto.github.io/2020/04/11/hexo-valine/</id>
+    <published>2020-04-11T01:36:00.000Z</published>
+    <updated>2020-07-05T16:43:42.159Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>LeanCloud官网（国际版）：<a href="https://leancloud.app/" target="_blank" rel="noopener">https://leancloud.app/</a><br>LeanCloud官网（中国版）：<a href="https://www.leancloud.cn/" target="_blank" rel="noopener">https://www.leancloud.cn/</a><br>Valine评论系统官网：<a href="https://valine.js.org/" target="_blank" rel="noopener">https://valine.js.org/</a></p><a id="more"></a><p>LeanCloud 中国版 和 国际版 的差别：</p><table><thead><tr><th style="text-align:center">中国版</th><th style="text-align:center">国际版</th></tr></thead><tbody><tr><td style="text-align:center">实名认证</td><td style="text-align:center">不需要</td></tr><tr><td style="text-align:center">域名备案</td><td style="text-align:center">不需要</td></tr><tr><td style="text-align:center">邮箱，手机号绑定</td><td style="text-align:center">邮箱，手机号绑定</td></tr></tbody></table><p>按需自行选择，个人使用推荐国际版</p><h4 id="1、注册登录"><a href="#1、注册登录" class="headerlink" title="1、注册登录"></a>1、注册登录</h4><p>注册 <a href="https://console.leancloud.app/login.html#/signin" target="_blank" rel="noopener">LeanCloud</a> 账号 ，登录后需要绑定 <strong>邮箱</strong>  <strong>手机号</strong>  进行下一步操作</p><p>剩下的直接看<a href="https://github.com/DesertsP/Valine-Admin" target="_blank" rel="noopener">valine-admin官网</a>吧，比较详细</p><p>配置好后</p><p>在 <code>yilia\layout\_partial\post</code> 中添加valine.ejs</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"vcomment"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"comment"</span>&gt;&lt;<span class="regexp">/div&gt; </span></span><br><span class="line"><span class="regexp">&lt;script src="/</span><span class="regexp">/cdn1.lncld.net/</span><span class="keyword">static</span>/js/<span class="number">3.0</span><span class="number">.4</span>/av-min.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script src="</span><span class="comment">//unpkg.com/valine/dist/Valine.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">   var notify = '&lt;%= theme.valine.notify %&gt;' == true ? true : false;</span></span><br><span class="line"><span class="regexp">   var verify = '&lt;%= theme.valine.verify %&gt;' == true ? true : false;</span></span><br><span class="line"><span class="regexp">    window.onload = function() &#123;</span></span><br><span class="line"><span class="regexp">        new Valine(&#123;</span></span><br><span class="line"><span class="regexp">            el: '.comment',</span></span><br><span class="line"><span class="regexp">            notify: notify,</span></span><br><span class="line"><span class="regexp">            verify: verify,</span></span><br><span class="line"><span class="regexp">            app_id: "&lt;%= theme.valine.appid %&gt;",</span></span><br><span class="line"><span class="regexp">            app_key: "&lt;%= theme.valine.appkey %&gt;",</span></span><br><span class="line"><span class="regexp">            placeholder: "&lt;%= theme.valine.placeholder %&gt;",</span></span><br><span class="line"><span class="regexp">            avatar:"&lt;%= theme.valine.avatar %&gt;"</span></span><br><span class="line"><span class="regexp">        &#125;);</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    $(document).ready(function()&#123;</span></span><br><span class="line"><span class="regexp">      $('.vemoji-btn').text('😀');</span></span><br><span class="line"><span class="regexp">      $("#vcomments").on('click', 'span.vat',function()&#123;</span></span><br><span class="line"><span class="regexp">        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));</span></span><br><span class="line"><span class="regexp">        $('textarea#veditor').focus();</span></span><br><span class="line"><span class="regexp">      &#125;)</span></span><br><span class="line"><span class="regexp">    &#125;)</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure><p>在 <code>yilia\layout\_partial</code>中添加</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.valine</span> &amp;&amp; <span class="attr">theme.valine.appid</span> &amp;&amp; <span class="attr">theme.valine.appkey</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span> <span class="attr">class</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">valine</span>', &#123;</span></span><br><span class="line"><span class="tag">        <span class="attr">key:</span> <span class="attr">post.slug</span>,</span></span><br><span class="line"><span class="tag">        <span class="attr">title:</span> <span class="attr">post.title</span>,</span></span><br><span class="line"><span class="tag">        <span class="attr">url:</span> <span class="attr">config.url</span>+<span class="attr">url_for</span>(<span class="attr">post.path</span>)</span></span><br><span class="line"><span class="tag">        &#125;) %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h4&gt;&lt;p&gt;LeanCloud官网（国际版）：&lt;a href=&quot;https://leancloud.app/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://leancloud.app/&lt;/a&gt;&lt;br&gt;LeanCloud官网（中国版）：&lt;a href=&quot;https://www.leancloud.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.leancloud.cn/&lt;/a&gt;&lt;br&gt;Valine评论系统官网：&lt;a href=&quot;https://valine.js.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://valine.js.org/&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="//pullauto.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo基本使用</title>
+    <link href="//pullauto.github.io/2020/04/10/hexo-basic/"/>
+    <id>//pullauto.github.io/2020/04/10/hexo-basic/</id>
+    <published>2020-04-10T01:36:00.000Z</published>
+    <updated>2020-07-05T17:26:24.040Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</p><a id="more"></a><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><p>安装使用hexo之前需要先安装Node.js和Git，当已经安装了Node.js和npm(npm是node.js的包管理工具)，可以通过以下命令安装hexo</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>用<code>hexo -v</code>查看一下版本</p><p>可以通过以下命令查看主机中是否安装了<strong>node.js</strong>和<strong>npm</strong></p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span> <span class="title">-v</span>    <span class="comment">#检查是否安装了node.js</span></span><br><span class="line">npm -v<span class="comment">#检查是否安装了npm</span></span><br></pre></td></tr></table></figure><p>新建一个文件夹（<strong>blog</strong>）进入 初始化一下hexo</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure><p>这个<strong>blog</strong>可以自己取什么名字都行，然后</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span>       <span class="comment">#安装依赖包</span></span><br></pre></td></tr></table></figure><p>完成后会出现几个文件夹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── node_modules    <span class="comment">#依赖包</span></span><br><span class="line">├── _config.yml     <span class="comment">#博客的配置文件</span></span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds       <span class="comment">#文章的一些模板</span></span><br><span class="line">├── <span class="built_in">source</span>          <span class="comment">#用来存放你的文章,资源</span></span><br><span class="line">|   └── _posts      <span class="comment">#存放你的文章</span></span><br><span class="line">└── themes<span class="comment">#主题</span></span><br></pre></td></tr></table></figure></p><h4 id="hexo基本命令"><a href="#hexo基本命令" class="headerlink" title="hexo基本命令"></a>hexo基本命令</h4><p><strong>（1）<code>hexo g</code>或<code>$ hexo generate</code></strong><br> 该命令执行后在<code>hexo</code>站点根目录下生成<code>public</code>文件夹</p><p><strong>（2）<code>hexo clean</code></strong><br> 把（1）中的<code>public</code>文件夹，和db.json数据删除</p><p><strong>（3）<code>hexo s</code>或<code>$ hexo server</code></strong><br> 启动服务预览</p><p><strong>（4）<code>hexo d</code>或<code>$ hexo deploy</code></strong><br> 部署站点，在本地生成<code>.deploy_git</code>文件夹，并将编译后的文件上传至 GitHub。</p><p><strong>（5）<code>hexo new [layout] &lt;title&gt;</code></strong><br> 例如：<code>$ hexo new photo “my-first-blog”</code><br> 上述指令执行时，Hexo 会尝试在 scaffolds 中寻找photo.md布局，若找到，则根据该布局新建文章；若未找到或指令中未指定该参数，则使用post.md新建文章。新建文章的名称在_config.yml中配置。</p><p><strong>（6）删除文章</strong><br> 只需在本地把<code>source/_posts</code>文件夹下的文章源文件删除后，执行以下命令重新部署即可。</p><h4 id="config-yml的配置"><a href="#config-yml的配置" class="headerlink" title="_config.yml的配置"></a>_config.yml的配置</h4><p><a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">_config.yml配置</a>官网已经比较详细了，不在多说</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h4&gt;&lt;p&gt;是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Markdown&lt;/a&gt;（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="//pullauto.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cdn加速获取资源</title>
+    <link href="//pullauto.github.io/2020/02/11/cdn/"/>
+    <id>//pullauto.github.io/2020/02/11/cdn/</id>
+    <published>2020-02-11T01:36:00.000Z</published>
+    <updated>2020-06-30T09:51:40.614Z</updated>
+    
+    <content type="html"><![CDATA[<p>Content Delivery Network，统一加载网络资源，有利于提高网页加载速度。</p><hr><h4 id="jsDelivr加速"><a href="#jsDelivr加速" class="headerlink" title="jsDelivr加速"></a>jsDelivr加速</h4><p>官网：<a href="https://www.jsdelivr.com/?docs=gh" target="_blank" rel="noopener">https://www.jsdelivr.com/?docs=gh</a><br><a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr – Open Source CDN</a> 是一款免费开源的 CDN，国内速度表现良好，且统一 CDN 来源同样有利于加载速度</p><a id="more"></a><p>使用方式：</p><ul><li>GitHub CDN: <code>https://cdn.jsdelivr.net/gh/user/repo@version/file</code></li><li>npm: <code>https://cdn.jsdelivr.net/npm/package@version/file</code></li></ul><p>示例：</p><ul><li>GitHub<code>https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js</code></li><li>npm: <code>https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js</code></li></ul><p>在末尾添加/以获取目录列表:</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">GitHub:</span> <span class="string">https:</span><span class="comment">//cdn.jsdelivr.net/gh/jquery/jquery/</span></span><br><span class="line"><span class="string">npm:</span> <span class="string">https:</span><span class="comment">//cdn.jsdelivr.net/npm/jquery/</span></span><br></pre></td></tr></table></figure><h4 id="UNPKG加速"><a href="#UNPKG加速" class="headerlink" title="UNPKG加速"></a>UNPKG加速</h4><p>官网：<a href="https://unpkg.com/" target="_blank" rel="noopener">https://unpkg.com/</a><br>使用方式：</p><ul><li>npm：<code>unpkg.com/:package@:version/:file</code></li></ul><p>示例：</p><ul><li>npm：<code>https://unpkg.com/jquery@3.2.1/dist/jquery.min.js</code><br>在末尾添加/以获取目录列表:</li><li>npm：<code>https://unpkg.com/jquery@3.2.1/</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Content Delivery Network，统一加载网络资源，有利于提高网页加载速度。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&quot;jsDelivr加速&quot;&gt;&lt;a href=&quot;#jsDelivr加速&quot; class=&quot;headerlink&quot; title=&quot;jsDelivr加速&quot;&gt;&lt;/a&gt;jsDelivr加速&lt;/h4&gt;&lt;p&gt;官网：&lt;a href=&quot;https://www.jsdelivr.com/?docs=gh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jsdelivr.com/?docs=gh&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jsdelivr.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;jsDelivr – Open Source CDN&lt;/a&gt; 是一款免费开源的 CDN，国内速度表现良好，且统一 CDN 来源同样有利于加载速度&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="web" scheme="//pullauto.github.io/tags/web/"/>
+    
+      <category term="cdn" scheme="//pullauto.github.io/tags/cdn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用不蒜子添加阅读统计量</title>
+    <link href="//pullauto.github.io/2020/02/10/site-add-reading/"/>
+    <id>//pullauto.github.io/2020/02/10/site-add-reading/</id>
+    <published>2020-02-10T02:36:00.000Z</published>
+    <updated>2020-06-30T09:53:19.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a><br>官网内容：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span>本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>引入外部 JavaScript</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这段代码可以写在footer.ejs里或者header.ejs里或者layout.ejs里</p><h4 id="添加站点访客数"><a href="#添加站点访客数" class="headerlink" title="添加站点访客数"></a>添加站点访客数</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span> </span><br><span class="line">   本站访客数：<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人</span><br></pre></td></tr></table></figure><h4 id="添加站点访问量"><a href="#添加站点访问量" class="headerlink" title="添加站点访问量"></a>添加站点访问量</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span> </span><br><span class="line">   本站访问量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure><p>计算访问量的方法有两种：<br>算法a：pv的方式，单个用户连续点击n篇文章，记录n次访问量。<br>算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。</p><h4 id="添加文章访问量"><a href="#添加文章访问量" class="headerlink" title="添加文章访问量"></a>添加文章访问量</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span>&gt;</span></span><br><span class="line">   本文总阅读量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure><hr><p>参考链接：</p><p><a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子官网</a></p><p><a href="https://www.jianshu.com/u/a55263eb2022" target="_blank" rel="noopener">心彻</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不蒜子官网：&lt;a href=&quot;http://busuanzi.ibruce.info/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://busuanzi.ibruce.info/&lt;/a&gt;&lt;br&gt;官网内容：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;busuanzi_container_site_pv&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;本站总访问量&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;busuanzi_value_site_pv&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;次&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="//pullauto.github.io/tags/hexo/"/>
+    
+      <category term="web" scheme="//pullauto.github.io/tags/web/"/>
+    
+  </entry>
+  
+</feed>
