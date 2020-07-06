@@ -29,9 +29,11 @@ LeanCloud 中国版 和 国际版 的差别：
 
 注册 [LeanCloud](https://console.leancloud.app/login.html#/signin) 账号 ，登录后需要绑定 **邮箱**  **手机号**  进行下一步操作
 
-剩下的直接看[valine-admin官网](https://github.com/DesertsP/Valine-Admin)吧，比较详细
+剩下的直接看[valine-admin官网](https://github.com/DesertsP/Valine-Admin)  或者  [BillChen2K](https://github.com/BillChen2K/Valine-Admin)  吧
 
-配置好后
+两者 风格有所不同 **BillChen2K** 是基于 **valine-admin** 的
+
+配置好后 
 
 在 `yilia\layout\_partial\post` 中添加valine.ejs
 
@@ -81,3 +83,6 @@ LeanCloud 中国版 和 国际版 的差别：
   <% } %>
 ```
 
+ LeanCloud 出现 **“因流控原因，通过定时任务唤醒体验版实例失败，建议升级至标准版云引擎实例避免休眠”** 问题。
+
+[使用github的actions解决](https://github.com/pullauto/leancloud-self-wake)
