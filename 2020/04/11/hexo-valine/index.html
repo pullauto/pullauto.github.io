@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="墨染&#39;s Blog">
 <meta property="og:description" content="准备工作LeanCloud官网（国际版）：https://leancloud.app/LeanCloud官网（中国版）：https://www.leancloud.cn/Valine评论系统官网：https://valine.js.org/">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-07-05T16:43:42.159Z">
+<meta property="og:updated_time" content="2020-07-06T14:40:58.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo添加Valine第三方评论系统">
 <meta name="twitter:description" content="准备工作LeanCloud官网（国际版）：https://leancloud.app/LeanCloud官网（中国版）：https://www.leancloud.cn/Valine评论系统官网：https://valine.js.org/">
@@ -71,6 +71,8 @@ var _hmt = _hmt || [];
 			<ul>
 			
 				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 				<li><a href="/about">关于我</a></li>
 	        
@@ -137,6 +139,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -150,12 +154,14 @@ var _hmt = _hmt || [];
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/about">关于我</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/about">关于我</a></li>
 		        
 				</ul>
 			</nav>
@@ -217,12 +223,15 @@ var _hmt = _hmt || [];
 </table>
 <p>按需自行选择，个人使用推荐国际版</p>
 <h4 id="1、注册登录"><a href="#1、注册登录" class="headerlink" title="1、注册登录"></a>1、注册登录</h4><p>注册 <a href="https://console.leancloud.app/login.html#/signin" target="_blank" rel="noopener">LeanCloud</a> 账号 ，登录后需要绑定 <strong>邮箱</strong>  <strong>手机号</strong>  进行下一步操作</p>
-<p>剩下的直接看<a href="https://github.com/DesertsP/Valine-Admin" target="_blank" rel="noopener">valine-admin官网</a>吧，比较详细</p>
-<p>配置好后</p>
+<p>剩下的直接看<a href="https://github.com/DesertsP/Valine-Admin" target="_blank" rel="noopener">valine-admin官网</a>  或者  <a href="https://github.com/BillChen2K/Valine-Admin" target="_blank" rel="noopener">BillChen2K</a>  吧</p>
+<p>两者 风格有所不同 <strong>BillChen2K</strong> 是基于 <strong>valine-admin</strong> 的</p>
+<p>配置好后 </p>
 <p>在 <code>yilia\layout\_partial\post</code> 中添加valine.ejs</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"vcomment"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"comment"</span>&gt;&lt;<span class="regexp">/div&gt; </span></span><br><span class="line"><span class="regexp">&lt;script src="/</span><span class="regexp">/cdn1.lncld.net/</span><span class="keyword">static</span>/js/<span class="number">3.0</span><span class="number">.4</span>/av-min.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script src="</span><span class="comment">//unpkg.com/valine/dist/Valine.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">   var notify = '&lt;%= theme.valine.notify %&gt;' == true ? true : false;</span></span><br><span class="line"><span class="regexp">   var verify = '&lt;%= theme.valine.verify %&gt;' == true ? true : false;</span></span><br><span class="line"><span class="regexp">    window.onload = function() &#123;</span></span><br><span class="line"><span class="regexp">        new Valine(&#123;</span></span><br><span class="line"><span class="regexp">            el: '.comment',</span></span><br><span class="line"><span class="regexp">            notify: notify,</span></span><br><span class="line"><span class="regexp">            verify: verify,</span></span><br><span class="line"><span class="regexp">            app_id: "&lt;%= theme.valine.appid %&gt;",</span></span><br><span class="line"><span class="regexp">            app_key: "&lt;%= theme.valine.appkey %&gt;",</span></span><br><span class="line"><span class="regexp">            placeholder: "&lt;%= theme.valine.placeholder %&gt;",</span></span><br><span class="line"><span class="regexp">            avatar:"&lt;%= theme.valine.avatar %&gt;"</span></span><br><span class="line"><span class="regexp">        &#125;);</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    $(document).ready(function()&#123;</span></span><br><span class="line"><span class="regexp">      $('.vemoji-btn').text('😀');</span></span><br><span class="line"><span class="regexp">      $("#vcomments").on('click', 'span.vat',function()&#123;</span></span><br><span class="line"><span class="regexp">        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));</span></span><br><span class="line"><span class="regexp">        $('textarea#veditor').focus();</span></span><br><span class="line"><span class="regexp">      &#125;)</span></span><br><span class="line"><span class="regexp">    &#125;)</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
 <p>在 <code>yilia\layout\_partial</code>中添加</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.valine</span> &amp;&amp; <span class="attr">theme.valine.appid</span> &amp;&amp; <span class="attr">theme.valine.appkey</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"comments"</span> <span class="attr">class</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">valine</span>', &#123;</span></span><br><span class="line"><span class="tag">        <span class="attr">key:</span> <span class="attr">post.slug</span>,</span></span><br><span class="line"><span class="tag">        <span class="attr">title:</span> <span class="attr">post.title</span>,</span></span><br><span class="line"><span class="tag">        <span class="attr">url:</span> <span class="attr">config.url</span>+<span class="attr">url_for</span>(<span class="attr">post.path</span>)</span></span><br><span class="line"><span class="tag">        &#125;) %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p> LeanCloud 出现 <strong>“因流控原因，通过定时任务唤醒体验版实例失败，建议升级至标准版云引擎实例避免休眠”</strong> 问题。</p>
+<p><a href="https://github.com/pullauto/leancloud-self-wake" target="_blank" rel="noopener">使用github的actions解决</a></p>
 
       
 
@@ -489,10 +498,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">chrome</a>
               </li>
              
@@ -502,6 +507,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">cdn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

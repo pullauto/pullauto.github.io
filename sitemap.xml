@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//pullauto.github.io/2020/04/11/hexo-valine/</loc>
+    
+    <lastmod>2020-07-06T14:40:58.819Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/about/index.html</loc>
+    
+    <lastmod>2020-07-06T09:38:45.456Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2020/02/10/git-basic/</loc>
+    
+    <lastmod>2020-07-06T09:25:06.223Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//pullauto.github.io/2020/04/12/hexo-optimization/</loc>
     
     <lastmod>2020-07-05T18:23:22.906Z</lastmod>
@@ -12,13 +33,6 @@
     <loc>//pullauto.github.io/2020/04/10/hexo-basic/</loc>
     
     <lastmod>2020-07-05T17:26:24.040Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//pullauto.github.io/2020/04/11/hexo-valine/</loc>
-    
-    <lastmod>2020-07-05T16:43:42.159Z</lastmod>
     
   </url>
   
@@ -58,13 +72,6 @@
   </url>
   
   <url>
-    <loc>//pullauto.github.io/about/index.html</loc>
-    
-    <lastmod>2020-06-26T10:02:07.936Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//pullauto.github.io/photos/index.html</loc>
     
     <lastmod>2017-07-28T18:51:08.000Z</lastmod>
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>//pullauto.github.io/assets/demo/jiugongge_demo.html</loc>
+    <loc>//pullauto.github.io/assets/demo/hack_demo.html</loc>
     
     <lastmod>2017-07-28T18:51:08.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>//pullauto.github.io/assets/demo/hack_demo.html</loc>
+    <loc>//pullauto.github.io/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2017-07-28T18:51:08.000Z</lastmod>
     
