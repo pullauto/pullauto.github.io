@@ -10,6 +10,8 @@ tags:
 
 #### 准备工作
 
+###### 该方法已失效
+
 LeanCloud官网（国际版）：[https://leancloud.app/](https://leancloud.app/)
 LeanCloud官网（中国版）：[https://www.leancloud.cn/](https://www.leancloud.cn/)
 Valine评论系统官网：[https://valine.js.org/](https://valine.js.org/)
@@ -29,9 +31,9 @@ LeanCloud 中国版 和 国际版 的差别：
 
 注册 [LeanCloud](https://console.leancloud.app/login.html#/signin) 账号 ，登录后需要绑定 **邮箱**  **手机号**  进行下一步操作
 
-剩下的直接看[valine-admin官网](https://github.com/DesertsP/Valine-Admin)  或者  [BillChen2K](https://github.com/BillChen2K/Valine-Admin)  吧
+剩下的直接看[valine-admin官网](https://github.com/DesertsP/Valine-Admin)  或者  [BillChen2K](https://github.com/BillChen2K/Valine-Admin)  吧
 
-两者 风格有所不同 **BillChen2K** 是基于 **valine-admin** 的
+两者 风格有所不同 **BillChen2K** 是基于 **valine-admin** 的
 
 配置好后 
 

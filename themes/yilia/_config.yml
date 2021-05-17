@@ -99,13 +99,13 @@ disqus: false
 
 #6、Valine https://valine.js.org
 
-valine: 
-   appid: 'OSGDwPhxduktCBLdEdkqVjmW-MdYXbMMI'  #Leancloud应用的appId
-   appkey: 'lcFV7Aw6fTHIlu0G1JgSnVaQ'  #Leancloud应用的appKey
-   verify: true #验证码
-   notify: true #评论回复提醒
-   avatar: mp #评论列表头像类型可见： https://valine.js.org/avatar.html
-   placeholder: Just go go #评论框占位符
+# valine: 
+#    appid: 'OSGDwPhxduktCBLdEdkqVjmW-MdYXbMMI'  #Leancloud应用的appId
+#    appkey: 'lcFV7Aw6fTHIlu0G1JgSnVaQ'  #Leancloud应用的appKey
+#    verify: true #验证码
+#    notify: true #评论回复提醒
+#    avatar: mp #评论列表头像类型可见： https://valine.js.org/avatar.html
+#    placeholder: Just go go #评论框占位符
 
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
