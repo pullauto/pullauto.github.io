@@ -2,9 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//pullauto.github.io/2020/02/10/Re0_developReady/</loc>
+    
+    <lastmod>2021-05-17T11:54:01.286Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2021/02/18/win_related_order/</loc>
+    
+    <lastmod>2021-05-17T11:36:08.798Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2021/02/18/tools/</loc>
+    
+    <lastmod>2021-05-17T11:33:11.269Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2020/05/03/npm-basis/</loc>
+    
+    <lastmod>2021-05-17T11:31:46.812Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2021/02/18/vscode-use/</loc>
+    
+    <lastmod>2021-05-17T11:28:30.391Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2020/04/10/gitdownload/</loc>
+    
+    <lastmod>2021-05-03T11:47:49.705Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2020/02/10/site-add-reading/</loc>
+    
+    <lastmod>2021-05-03T11:38:54.134Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//pullauto.github.io/2020/04/11/hexo-valine/</loc>
     
-    <lastmod>2020-07-06T14:40:58.819Z</lastmod>
+    <lastmod>2021-05-03T02:53:16.610Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/2020/02/10/development-tool-shortcuts/</loc>
+    
+    <lastmod>2020-07-15T08:01:08.453Z</lastmod>
     
   </url>
   
@@ -58,13 +114,6 @@
   </url>
   
   <url>
-    <loc>//pullauto.github.io/2020/02/10/site-add-reading/</loc>
-    
-    <lastmod>2020-06-30T09:53:19.815Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//pullauto.github.io/2020/02/11/cdn/</loc>
     
     <lastmod>2020-06-30T09:51:40.614Z</lastmod>
@@ -86,6 +135,13 @@
   </url>
   
   <url>
+    <loc>//pullauto.github.io/assets/demo/hack_demo.html</loc>
+    
+    <lastmod>2017-07-28T18:51:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//pullauto.github.io/assets/demo/border1px.html</loc>
     
     <lastmod>2017-07-28T18:51:08.000Z</lastmod>
@@ -100,28 +156,7 @@
   </url>
   
   <url>
-    <loc>//pullauto.github.io/assets/demo/hack_demo.html</loc>
-    
-    <lastmod>2017-07-28T18:51:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//pullauto.github.io/assets/demo/jiugongge_demo2.html</loc>
-    
-    <lastmod>2017-07-28T18:51:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//pullauto.github.io/assets/demo/gift/index.html</loc>
-    
-    <lastmod>2017-07-28T18:51:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//pullauto.github.io/assets/demo/my_news_reader/index.html</loc>
     
     <lastmod>2017-07-28T18:51:08.000Z</lastmod>
     
@@ -135,7 +170,21 @@
   </url>
   
   <url>
+    <loc>//pullauto.github.io/assets/demo/gift/index.html</loc>
+    
+    <lastmod>2017-07-28T18:51:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//pullauto.github.io/assets/demo/mediator/demo.html</loc>
+    
+    <lastmod>2017-07-28T18:51:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//pullauto.github.io/assets/demo/my_news_reader/index.html</loc>
     
     <lastmod>2017-07-28T18:51:08.000Z</lastmod>
     
