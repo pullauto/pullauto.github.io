@@ -6,9 +6,9 @@
     "version": "3.9.0"
   },
   "scripts": {
-    "build": "hexo clean && hexo generate && hexo deploy && hexo backup",
+    "backup": "hexo clean && hexo backup",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "hexo clean &&hexo deploy",
     "server": "hexo clean && hexo server"
   },
   "dependencies": {
