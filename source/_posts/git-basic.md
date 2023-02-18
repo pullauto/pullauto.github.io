@@ -11,7 +11,7 @@ tags:
 
 
 
-#### 基础命令
+##### 基础命令
 
 git init 初始化一个Git仓库
 git add <file>将文件添加到暂存区，可反复多次使用，添加多个文件
@@ -22,7 +22,22 @@ git status
 
 <!--more-->
 
-#### 版本命令
+##### 基本配置
+
+```
+# 配置用户名
+git config --global user.name "name"
+# 配置邮箱
+git config --global user.email "name@mail.com"
+#生成ssh密钥对
+ssh-keygen -t rsa -C "name@mail.com"
+#进入目录,查看生成的SSH密钥
+cd C:\Users\Administrator\.ssh
+#查看公钥和私钥
+cat ~/.ssh/id_rsa.pub
+```
+
+##### 版本命令
 
 git last 		最后一次提交信息
 git log 		查看日志（提交历史）
@@ -33,7 +48,7 @@ git reset --hard HEAD^		 (HEAD^^)回退到上一个(上上个)版本
 
 git push -f    	强制推送，reset后使用
 
-#### 工作区>暂存区>仓库
+##### 工作区>暂存区>仓库
 
 
 Git管理的文件分为：工作区，版本库，版本库又分为暂存区stage和暂存区分支master(仓库)
@@ -42,7 +57,7 @@ git status 命令查看哪些文件处于什么状态。
 
 git add把文件从工作区>>>>暂存区，git commit把文件从暂存区>>>>仓库，
 
-#### git diff用来比较文件之间的不同
+##### git diff用来比较文件之间的不同
 
 （1）git diff：当工作区有改动，临时区为空，diff的对比是“工作区与最后一次commit提交的仓库的共同文件”；当工作区有改动，临时区不为空，diff对比的是“工作区与暂存区的共同文件”。
 
@@ -57,20 +72,20 @@ git add的反向命令git checkout，撤销工作区修改，即把暂存区最�
 
 git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区.
 
-#### 撤销修改
+##### 撤销修改
 
 git checkout -- file 丢弃工作区的修改
 git reset HEAD <file>把暂存区的修改撤销掉,重新放回工作区
 最新版git已经使用git restore 代替了原来的reset和checkout命令了
 
-#### 删除文件
+##### 删除文件
 
 rm <file> 删除工作区的文件
 git rm <file>  删除工作区文件，并放入暂存区
 git rm -f <file> 删除工作区已更改文件，并放入暂存区
 git rm --cached <file>删除暂存区文件
 
-#### 创建合并分支
+##### 创建合并分支
 
 git branch <name>：创建分支
 git checkout <name>：或 git switch <name>切换分支
@@ -78,7 +93,7 @@ git checkout -b <name>：或 git switch -c <name>创建+切换分支
 git merge <name>：合并某分支到当前分支
 git branch -d <name>：删除分支
 
-#### 标签相关命令
+##### 标签相关命令
 
 git tag查看所有标签
 git tag <name>打一个新标签
@@ -93,7 +108,7 @@ git push origin --tags 推送未推送过的全部本地标签到远程
 
 
 
-#### gitignore文件配置
+##### gitignore文件配置
 
 ```
 .gitignore  作用于从来没有被 Git 记录过的文件

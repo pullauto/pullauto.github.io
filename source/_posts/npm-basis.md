@@ -15,7 +15,7 @@ tags:
 
   - `npm init --yes` 生成默认package.json文件     <!-- more -->
 
-- `npm install <Module Name>-g` 全局安装模块，可以直接在命令行里使用
+- `npm install <Module Name> -g` 全局安装模块，可以直接在命令行里使用
 
   - `npm install <Module name>`  使用npm命令安装模块
 
@@ -31,7 +31,19 @@ tags:
 
   如果vue项目要部署上线，为防止依赖包失效，一般采用–save
 
-#### package.json文件属性
+
+
+##### npm包管理器后缀
+
+- **npm install** (没有参数)，在本地node_modules文件夹中安装依赖项。默认情况下，`npm install`将安装列为依赖项的所有模块`package.json`。
+- **--save**,简写 **-S**; 表示安装到你的当前项目目录下，可以看到在package.json文件的dependencies中出现了。**生产环境依赖**
+- **--save-dev**，简写 **-D**;表示安装包将出现在您的`devDependencies`。**开发环境依赖**
+- **--save-optional**，简写 **-O**; 安装包会出现在您的`optionalDependencies`。**可选环境依赖**
+- **--save-prod**，简写**-P**;表示安装包将出现在您的`dependencies`。
+- **--no-save**，防止保存到dependencies。（这个也很少用）
+
+
+##### package.json文件属性
 
 - `name` 包名
 - `version`包的版本号
