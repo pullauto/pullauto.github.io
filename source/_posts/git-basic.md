@@ -24,12 +24,14 @@ git status
 
 #### 版本命令
 
-git last 最后一次提交信息
-git log 查看日志（提交历史）
+git last 		最后一次提交信息
+git log 		查看日志（提交历史）
 git log --pretty=oneline
-git reflog 查看命令历史
-git reset --hard <commit id> 回退到某个版本
-git reset --hard HEAD^ (HEAD^^)回退到上一个(上上个)版本
+git reflog 	查看命令历史
+git reset --hard <commit id> 	回退到某个版本，抛弃<commit id>之后的版本。
+git reset --hard HEAD^		 (HEAD^^)回退到上一个(上上个)版本
+
+git push -f    	强制推送，reset后使用
 
 #### 工作区>暂存区>仓库
 
