@@ -24,6 +24,8 @@ npm config set registry https://registry.npmmirror.com
 查看源，可以看到设置过的所有的源：npm(cnpm) config get registry
 ```
 
+npm install 模块名 [-g] 的安装语句时，会将安装的模块安装到【C:\Users\用户名\AppData\Roaming\npm】路径中
+
 <!-- more -->
 
 ##### 安装yarn
@@ -49,7 +51,7 @@ vue create project-name   创建项目
 
 ##### 推荐工具
 
-- [VScode](https://code.visualstudio.com/Download) Hbuilder [HbuilderX](https://www.dcloud.io/hbuilderx.html)编码工具
+- [VScode](https://code.visualstudio.com/Download)  [HbuilderX](https://www.dcloud.io/hbuilderx.html)编码工具
 
   **vscode改变扩展安装地址**：
 
@@ -67,7 +69,9 @@ vue create project-name   创建项目
 
 - [天若OCR](http://ocr.tianruo.net/) 识图工具
 
-- [SwitchHosts](https://github.com/oldj/SwitchHosts) dns工具
+- [Watt Toolkit](https://github.com/BeyondDimension/SteamTools) github加速，微软商店可下
+
+- [SwitchHosts](https://github.com/oldj/SwitchHosts) dns工具，github加速
 
   - 配合github520实现实时更新github的ip
   - ipconfig /flushdns 刷新dns缓存
